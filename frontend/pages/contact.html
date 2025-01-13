@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Eventify</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="/frontend/index.html">
+          <img src="../assets/images/logo.png" alt="Logo" width="40" /> Eventify
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./events.html">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./engagement.html">Engagement</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./contact.html">Contact</a>
+            </li>
+            <li class="nav-item" id="manage-events">
+              <a class="nav-link" href="./event-management.html"
+                >Manage Events</a
+              >
+            </li>
+            <li class="nav-item" id="call-to-action">
+              <a class="btn-custom btn-custom-primary" href="./login.html"
+                >Login/Register</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Contact Us Section -->
+    <section class="contact-us-section py-5">
+      <div class="container">
+        <h1 class="text-center mb-4">Contact Us</h1>
+        <p class="lead text-center mb-5">
+          Have questions? We're here to help. Fill out the form below, and we'll
+          get back to you shortly.
+        </p>
+        <form id="contact-form" class="row g-3">
+          <div class="col-md-6">
+            <label for="name" class="form-label">Name:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="email" class="form-label">Email:</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+          </div>
+          <div class="col-12">
+            <label for="message" class="form-label">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              class="form-control"
+              placeholder="Your Message"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+          <div class="col-12 text-center">
+            <a href="#" class="btn btn-custom-primary mt-3 contact-us-btn"
+              >Submit</a
+            >
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer
+      class="footer"
+      role="contentinfo"
+      itemscope
+      itemtype="http://schema.org/WPFooter"
+    >
+      <div class="social" role="navigation" aria-labelledby="social-heading">
+        <h3 id="social-heading" class="sr-only">Follow us on social media</h3>
+        <a href="#" aria-label="Facebook"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="#" aria-label="Twitter"
+          ><i class="fa-brands fa-x-twitter"></i
+        ></a>
+        <a href="#" aria-label="Mastodon"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a href="#" aria-label="Instagram"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+      </div>
+      <hr class="footer-break" />
+      <ul
+        class="footer-links"
+        role="navigation"
+        aria-labelledby="footer-links-heading"
+      >
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <p class="copyright">
+        © 2025
+        <a style="color: inherit; text-decoration: none" href="#">Eventify</a>.
+        Empowering Your Events. All Rights Reserved.
+      </p>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // logout
+      function logout() {
+        localStorage.removeItem("token");
+        window.location.href = "pages/login.html";
+      }
+
+      // check if token exists in localstorage, if yes then show logout button instead of login/register button
+      if (localStorage.getItem("token"))
+        document.getElementById(
+          "call-to-action"
+        ).innerHTML = `<a class="btn-custom btn-custom-primary" onclick="logout()">
+            Logout
+          </a>`;
+      else
+        document.getElementById(
+          "call-to-action"
+        ).innerHTML = `<a class="btn-custom btn-custom-primary" href="./login.html">
+            Login/Register
+          </a>`;
+
+      // DECODE TOKEN
+      const token = JSON.parse(localStorage.getItem("token"));
+      if (token) {
+        const decodedToken = parseJwt(token);
+        const isAdmin = decodedToken.isAdmin;
+
+        // Hide the manage event button if the user is not an admin
+        if (!isAdmin)
+          document.getElementById("manage-events").style.display = "none";
+      }
+
+      function parseJwt(token) {
+        // Extract the base64url encoded payload
+        var base64Url = token.split(".")[1];
+
+        // Convert the base64url encoded payload to standard base64
+        var base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+
+        // Decode the base64 encoded payload
+        var jsonPayload = decodeURIComponent(
+          window
+            .atob(base64)
+            .split("")
+            .map(function (c) {
+              return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+            })
+            .join("")
+        );
+
+        // Parse the JSON payload
+        return JSON.parse(jsonPayload);
+      }
+    </script>
+  </body>
+</html>

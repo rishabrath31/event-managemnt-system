@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login/Register - Event Management System</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../assets/images/logo.png" alt="Logo" />Eventify
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li>
+              LOG IN TO <i><b>VIEW MORE</b></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="login-section">
+      <div class="container main-container">
+        <!-- Login/Register Form -->
+        <div class="form-container" id="login-form-container">
+          <h2>Login to Eventify</h2>
+
+          <!-- Login Form -->
+          <form id="login-form">
+            <div class="mb-3">
+              <label for="login-email" class="form-label">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="login-email"
+                name="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="login-password" class="form-label">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="login-password"
+                name="password"
+                placeholder="Enter your password"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+          </form>
+
+          <!-- Social Login Options -->
+          <div class="social-login-text">
+            <p>or login with</p>
+          </div>
+          <div class="social-links">
+            <!-- Google Login Anchor -->
+            <a href="#" class="google">
+              Login with Google<i class="fab fa-google"></i>
+            </a>
+
+            <!-- Facebook Login Anchor -->
+            <a href="#" class="facebook">
+              Login with Facebook <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
+
+          <div class="form-switch">
+            Don't have an account?
+            <a href="#register" id="register-link">Register</a>
+          </div>
+        </div>
+
+        <!-- Registration Form (Hidden initially) -->
+        <div class="form-container" id="register-form-container" style="display: none">
+          <h2>Create an Account</h2>
+
+          <form id="register-form" onsubmit="register()">
+            <div class="mb-3">
+              <label for="register-name" class="form-label">Full Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="register-name"
+                name="name"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="register-email" class="form-label"
+                >Email address</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="register-email"
+                name="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="register-password" class="form-label">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="register-password"
+                name="password"
+                placeholder="Create a password"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="register-confirm-password" class="form-label"
+                >Confirm Password</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="register-confirm-password"
+                name="confirm-password"
+                placeholder="Confirm your password"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+          </form>
+
+          <div class="form-switch">
+            Already have an account? <a href="#login" id="login-link">Login</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="footer"
+      role="contentinfo"
+      itemscope
+      itemtype="http://schema.org/WPFooter"
+    >
+      <div class="social" role="navigation" aria-labelledby="social-heading">
+        <h3 id="social-heading" class="sr-only">Follow us on social media</h3>
+        <a href="#" aria-label="Facebook"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="#" aria-label="Twitter"
+          ><i class="fa-brands fa-x-twitter"></i
+        ></a>
+        <a href="#" aria-label="Mastodon"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a href="#" aria-label="Instagram"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+      </div>
+      <hr class="footer-break" />
+      <ul
+        class="footer-links"
+        role="navigation"
+        aria-labelledby="footer-links-heading"
+      >
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <p class="copyright">
+        © 2025
+        <a style="color: inherit; text-decoration: none" href="#">Eventify</a>.
+        Empowering Your Events. All Rights Reserved.
+      </p>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FontAwesome (for social icons) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+      // Redirect to index page if token exists in local storage
+      if (localStorage.getItem("token")) {
+        window.location.href = "../index.html";
+      }
+    </script>
+    <script src="../api/auth.js"></script>
+  </body>
+</html>

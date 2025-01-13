@@ -1,0 +1,867 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h5 {
+  font-weight: bold;
+}
+
+/* Navbar */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navbar-brand img {
+  margin-right: 10px;
+  width: 50px; /* Adjust width to create a circular shape */
+  height: 50px; /* Same height as width to ensure it's a perfect circle */
+  object-fit: cover; /* Ensure the image covers the area */
+  object-position: center; /* Center the image within the container */
+  border-radius: 50%; /* This makes the image circular */
+}
+
+.navbar .btn-custom {
+  margin-left: 10px;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+.navbar .btn-custom:hover {
+  background-color: #8e44ad; /* Vibrant purple for hover */
+  color: #ffffff;
+}
+
+/* Hero Section */
+header {
+  background: url("../images/hero-bg.jpg") no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+header .btn-custom {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #f8f9fa;
+  color: #6a1b9a;
+  border: 1px solid #007bff;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+header .btn-custom:hover {
+  background-color: #8e44ad; /* Vibrant purple for hover */
+  color: #ffffff;
+}
+
+/* Features Section */
+#features {
+  text-align: center;
+}
+#features img {
+  transition: transform 0.3s ease;
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+#features img:hover {
+  transform: scale(1.1);
+  border: 2px solid #8e44ad; /* Purple border to match theme */
+}
+#features h5 {
+  margin-top: 15px;
+  font-size: 1.25rem;
+}
+#features p {
+  color: #6a1b9a;
+}
+
+/* Events Section */
+#events .card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+#events .card:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 6px 12px rgba(142, 68, 173, 0.2); /* Purple shadow */
+}
+#events .card img {
+  height: 400px;
+  object-fit: cover;
+}
+#events .card-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* About Us Section */
+#about {
+  background-color: #f9f9f9; /* Light background for contrast */
+  padding: 50px 0;
+}
+#about h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #6a1b9a; /* Theme color for the heading */
+}
+#about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555; /* Neutral color for text */
+  margin-bottom: 30px;
+}
+#about .row h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #6a1b9a; /* Theme color */
+}
+#about .row p {
+  font-size: 1rem;
+  color: #666; /* Slightly darker for emphasis */
+}
+#about .row .box {
+  padding: 20px;
+  border: 1px solid #ddd; /* Adds a subtle border to separate columns */
+  border-radius: 10px;
+  background-color: #ffffff; /* White background for cards */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#about .row .box:hover {
+  transform: translateY(-5px); /* Adds a lift effect on hover */
+  box-shadow: 0px 6px 12px rgba(142, 68, 173, 0.2); /* Purple shadow */
+  border: 1px solid #8e44ad; /* Purple border */
+}
+
+/* FOOTER */
+
+.footer {
+  padding: 40px 0;
+  background-color: #0d1117;
+  color: white;
+}
+
+.footer ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.footer li {
+  display: inline-block; /* Change to inline-block for horizontal layout */
+  padding: 0 10px;
+}
+
+.footer ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.footer ul a:hover {
+  opacity: 1;
+}
+
+.footer .social {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.footer .social > a {
+  font-size: 28px;
+  width: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 8px;
+}
+
+.footer .social > a:hover {
+  opacity: 0.9;
+}
+
+.footer .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 0;
+}
+.footer .footer-break {
+  height: 2px;
+  border-width: 0;
+  color: gray;
+  background-color: white;
+}
+
+/* FOOTER END */
+
+/* Custom Button Styles */
+.btn-custom-light {
+  background-color: #f8f9fa;
+  color: #007bff;
+  border: 1px solid #007bff;
+}
+.btn-custom-light:hover {
+  background-color: #8e44ad; /* Vibrant purple for hover */
+  color: white;
+  border: 1px solid #8e44ad;
+}
+.btn-custom-primary {
+  background-color: #6a1b9a;
+  color: white;
+  border: 1px solid #6a1b9a;
+  padding: 8px 8px;
+  border-radius: 30px;
+  text-decoration: none;
+}
+.btn-custom-primary:hover {
+  background-color: #8e44ad; /* Vibrant red for hover */
+  border: 1px solid #8e44ad;
+  color: white;
+}
+
+.about-row-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  header p {
+    font-size: 1rem;
+  }
+  #features .col-md-4 {
+    margin-bottom: 20px;
+  }
+  #about h2 {
+    font-size: 1.8rem;
+  }
+  #about p {
+    font-size: 1rem;
+  }
+  #about .row div {
+    margin-bottom: 20px; /* Adds space between cards on small screens */
+  }
+}
+
+/* LOGIN PAGE */
+
+.login-section {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #6a0dad, #9b4dca, #b37eb1);
+}
+
+.main-container {
+  margin: 2rem auto;
+  max-width: 500px;
+  width: 100%;
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-switch {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.form-switch a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.form-switch a:hover {
+  text-decoration: underline;
+}
+
+.social-login-text {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.social-login-text p {
+  font-size: 14px;
+  color: #666;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Social Links */
+.social-links a {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  margin-bottom: 15px;
+  text-decoration: none;
+  color: #fff; /* Text color */
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.social-links a .fab {
+  margin-left: 10px;
+  color: black; /* Make the icons black */
+}
+
+.social-links a.google {
+  background-color: #db4437; /* Google red color */
+}
+
+.social-links a.google:hover {
+  background-color: #c1351d;
+}
+
+.social-links a.facebook {
+  background-color: #3b5998; /* Facebook blue color */
+}
+
+.social-links a.facebook:hover {
+  background-color: #2d4373;
+}
+
+/* Adjust Icon Color Inside Links */
+.social-links a .fab {
+  color: black; /* Make icon black */
+}
+
+/* LOGIN PAGE */
+
+/* Events.html */
+/* About Intro Section */
+.about-intro {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 80px 0;
+}
+
+.about-intro h1 {
+  font-size: 2.5rem;
+}
+
+.about-intro p {
+  font-size: 1.3rem;
+  color: #6a1b9a;
+}
+
+.about-intro .about-image {
+  height: auto;
+  margin-top: 30px;
+  height: 400px;
+  margin-top: 30px;
+  width: 80%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Mission Section */
+.about-mission {
+  background-color: #f9f9f9;
+}
+
+.about-mission h2 {
+  font-size: 2rem;
+}
+
+.about-mission p {
+  font-size: 1.2rem;
+  color: #6a1b9a;
+}
+
+/* Features Section */
+.about-features .fa {
+  color: #8e44ad;
+}
+
+i {
+  color: #8e44ad;
+}
+
+.about-features h2 {
+  font-size: 2rem;
+}
+
+.about-features .col-md-4 {
+  margin-bottom: 30px;
+}
+
+.about-features h3 {
+  font-size: 1.5rem;
+  color: #343a40;
+}
+
+.about-features p {
+  color: #6a1b9a;
+}
+
+/* Team Section */
+.about-team img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.about-team h3 {
+  margin-top: 15px;
+}
+
+.about-team p {
+  color: #6a1b9a;
+  font-size: 1rem;
+}
+
+/* Contact Section */
+.about-contact h2 {
+  font-size: 2rem;
+}
+
+.about-contact p {
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+.about-contact a {
+  color: #6a1b9a;
+  text-decoration: none;
+}
+
+.about-contact a:hover {
+  text-decoration: underline;
+}
+.contact-us-btn {
+  width: 20%;
+}
+/* CTA Section */
+.about-cta {
+  background: linear-gradient(to right, #6a1b9a, #9c27b0); /* Purple gradient */
+  color: #fff;
+}
+
+.about-cta h2 {
+  font-size: 2.5rem;
+}
+
+.about-cta p {
+  font-size: 1.2rem;
+}
+
+.about-cta .btn {
+  font-size: 1.1rem;
+  padding: 12px 30px;
+}
+/* Event.html */
+#event-highlights .card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+#event-highlights .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(142, 68, 173, 0.2);
+}
+#event-highlights .card-img-top {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+#event-categories .card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+#event-categories .card:hover {
+  transform: translateY(-5px);
+}
+#event-gallery img {
+  transition: transform 0.3s ease;
+}
+#event-gallery img:hover {
+  transform: scale(1.05);
+}
+.event-registration {
+  background: linear-gradient(to right, #7b2cbf, #9d4edd, #c77dff);
+  color: #fff; /* Ensure text is readable on a dark gradient */
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+@media (max-width: 576px) {
+  #event-highlights .card {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: none; /* Remove hover effects for better mobile usability */
+  }
+  #event-highlights .card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  #event-highlights .card-img-top {
+    height: 150px; /* Reduce image height for compact view */
+    object-fit: cover;
+  }
+
+  #event-categories .card {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: none;
+    margin-bottom: 10px; /* Add spacing between cards */
+  }
+  #event-categories .card:hover {
+    transform: none;
+  }
+
+  #event-gallery img {
+    width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
+    transition: none;
+  }
+  #event-gallery img:hover {
+    transform: none;
+  }
+
+  .event-registration {
+    padding: 20px;
+    font-size: 0.9rem; /* Adjust font size for readability */
+    min-height: auto; /* Allow flexible height for smaller screens */
+  }
+}
+
+/* CreateEVENT.HTML */
+
+.event-creation {
+  font-family: "Roboto", sans-serif;
+  background-color: #121212;
+  padding: 50px 0;
+  color: #e0e0e0;
+}
+
+.event-creation .container {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #333;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.event-creation h1 {
+  text-align: center;
+  font-size: 36px;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.event-creation form {
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  gap: 20px; /* Space between form elements */
+}
+
+.event-creation .form-group {
+  display: flex;
+  flex-direction: column; /* Ensure labels and inputs stack in a column */
+}
+
+.event-creation label {
+  font-size: 16px;
+  color: #e0e0e0;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.event-creation input,
+textarea,
+select {
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background-color: #222;
+  color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.event-creation input:focus,
+textarea:focus,
+select:focus {
+  border-color: #9c27b0; /* Neon Purple */
+  outline: none;
+}
+
+.event-creation button {
+  background-color: #9c27b0; /* Neon Purple */
+  color: #ffffff;
+  padding: 16px 24px;
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  align-self: center; /* Center the button */
+}
+
+.event-creation button:hover {
+  background-color: #7b1fa2; /* Darker Purple */
+}
+
+@media (max-width: 768px) {
+  .event-creation h1 {
+    font-size: 28px;
+  }
+
+  .event-creation .container {
+    padding: 25px;
+  }
+
+  .event-creation input,
+  textarea,
+  select {
+    padding: 12px;
+  }
+
+  .event-creation button {
+    padding: 14px 20px;
+    font-size: 16px;
+  }
+}
+
+/* CreateEVENT.HTML */
+
+/* EVENT MANAGEMENT */
+/* Custom Styling */
+.event-management {
+  padding: 2rem 0;
+  background-color: #f9f9f9;
+}
+.event-list table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+.event-list th,
+.event-list td {
+  padding: 0.75rem;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+.event-list th {
+  background-color: #343a40;
+  color: #fff;
+}
+.event-list td {
+  background-color: #fff;
+}
+.event-summary {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #fdfdfd;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.btn-action {
+  margin: 0.2rem;
+}
+
+/* ENGAGEMENT.HTML*/
+.engagement-section {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.engagement-header {
+  background-color: #800080; /* Purple */
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.engagement-section .container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.engagement-section .feature {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.engagement-section .feature h2 {
+  color: #800080; /* Purple */
+}
+
+.engagement-section .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  background-color: #9b30ff; /* Violet */
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.engagement-section .btn:hover {
+  background-color: #800080; /* Purple */
+}
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .engagement-section .container {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .engagement-section .feature {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  .event-list th,
+  .event-list td {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  .event-summary {
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .event-list h2 {
+    text-align: center;
+  }
+  .event-management {
+    padding: 1rem 0;
+  }
+  .engagement-section .container {
+    padding: 10px;
+  }
+  .engagement-section .feature {
+    margin-bottom: 15px;
+  }
+  .engagement-header {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+  .engagement-section .btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .event-list table {
+    font-size: 0.8rem;
+  }
+  .event-list th,
+  .event-list td {
+    padding: 0.4rem;
+  }
+  .event-summary {
+    padding: 0.6rem;
+    font-size: 0.85rem;
+  }
+  .engagement-section .feature h2 {
+    font-size: 1.5rem;
+  }
+  .engagement-section .btn {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .engagement-header {
+    font-size: 1rem;
+    padding: 8px;
+  }
+  .engagement-section .feature h2 {
+    font-size: 1.2rem;
+  }
+  .event-list th,
+  .event-list td {
+    font-size: 0.7rem;
+  }
+  .btn-action {
+    margin: 0.1rem;
+  }
+}
+
+/* EVENT DETAIL PAGE  */
+.event-details .custom-link {
+  color: #6f42c1; /* Purple color */
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #6f42c1;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.event-details .custom-link:hover {
+  background-color: #6f42c1;
+  color: #fff;
+}
+.event-details .col-md-6 img {
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 30px;
+}

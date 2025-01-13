@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events - Eventify</title>
+    <!-- External CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="/frontend/index.html">
+          <img src="../assets/images/logo.png" alt="Logo" width="40" /> Eventify
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./events.html">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./engagement.html">Engagement</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html">Contact</a>
+            </li>
+            <li class="nav-item" id="manage-events">
+              <a class="nav-link" href="./event-management.html"
+                >Manage Events</a
+              >
+            </li>
+            <li class="nav-item" id="call-to-action">
+              <a class="btn-custom btn-custom-primary" href="./login.html"
+                >Login/Register</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header
+      class="event-hero py-5 bg-light text-center"
+      style="background-image: url('../assets/images/events-bg.jpg')"
+    >
+      <div class="container">
+        <h1>Discover Exciting Events</h1>
+        <p>
+          <b
+            >Explore a diverse range of exciting events tailored to your
+            interests, and join the fun by participating in unforgettable
+            experiences designed just for you.</b
+          >
+        </p>
+        <a
+          id="create-event"
+          href="create-event.html"
+          class="btn btn-custom-primary mt-3"
+          >Host an Event</a
+        >
+        <!-- <a href="login.html" class="btn btn-secondary mt-3"
+          >Login to View More</a
+        > -->
+      </div>
+    </header>
+
+    <!-- Search and Filters -->
+    <section id="search-bar" class="py-4 bg-dark text-white">
+      <div class="container">
+        <form id="search-form" class="row g-3">
+          <!-- Keyword Search -->
+          <div class="col-md-4">
+            <input
+              type="text"
+              id="search-input"
+              class="form-control"
+              placeholder="Search by keyword..."
+            />
+          </div>
+          <!-- Location Filter -->
+          <div class="col-md-3">
+            <select id="location-filter" class="form-select">
+              <option value="">Filter by location</option>
+              <option value="New York">New York</option>
+              <option value="San Francisco">San Francisco</option>
+              <option value="Los Angeles">Los Angeles</option>
+            </select>
+          </div>
+          <!-- Date Filter -->
+          <div class="col-md-2">
+            <input type="date" id="date-filter" class="form-control" />
+          </div>
+          <!-- Category Filter -->
+          <div class="col-md-2">
+            <select id="category-filter" class="form-select">
+              <option value="">Filter by category</option>
+              <option value="Tech">Tech</option>
+              <option value="Art">Art</option>
+              <option value="Music">Music</option>
+            </select>
+          </div>
+          <!-- Search Button -->
+          <div class="col-md-1">
+            <button type="submit" class="btn btn-custom-primary w-100">
+              Search
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Event Highlights Section -->
+    <section id="event-highlights" class="py-5 text-center">
+      <div class="container">
+        <h2 class="mb-4">Event Highlights</h2>
+        <p class="mb-5">
+          Explore featured events happening soon. Don’t miss out on these
+          amazing experiences!
+        </p>
+        <div id="event-cards" class="row">
+          <!-- Event Card 1 -->
+          <div
+            class="col-md-4"
+            data-location="New York"
+            data-category="Tech"
+            data-date="2025-01-15"
+          >
+            <div class="card">
+              <img
+                src="../assets/images/tech.jpeg"
+                class="card-img-top"
+                alt="Tech Conference 2025"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Tech Conference 2025</h5>
+                <p class="card-text">
+                  Join the leading tech conference featuring industry leaders
+                  and innovators.
+                </p>
+                <a href="event-details.html?id=1" class="btn btn-custom-primary"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Event Card 2 -->
+          <div
+            class="col-md-4"
+            data-location="Los Angeles"
+            data-category="Art"
+            data-date="2025-02-10"
+          >
+            <div class="card">
+              <img
+                src="../assets/images/art.jpeg"
+                class="card-img-top"
+                alt="Art Gala Night"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Art Gala Night</h5>
+                <p class="card-text">
+                  Experience the beauty of art with renowned artists and
+                  exhibitions.
+                </p>
+                <a href="event-details.html?id=2" class="btn btn-custom-primary"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Event Card 3 -->
+          <div
+            class="col-md-4"
+            data-location="San Francisco"
+            data-category="Music"
+            data-date="2025-03-05"
+          >
+            <div class="card">
+              <img
+                src="../assets/images/music.jpeg"
+                class="card-img-top"
+                alt="Music Festival"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Music Festival</h5>
+                <p class="card-text">
+                  Celebrate music with top bands and artists performing live.
+                </p>
+                <a href="event-details.html?id=3" class="btn btn-custom-primary"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Event Card 4 -->
+          <div class="row mt-4">
+            <div
+              class="col-md-4"
+              data-location="Chicago"
+              data-category="Business"
+              data-date="2025-04-20"
+            >
+              <div class="card">
+                <img
+                  src="../assets/images/biz.jpg"
+                  class="card-img-top"
+                  alt="Startup Meetup"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Startup Meetup</h5>
+                  <p class="card-text">
+                    Network with entrepreneurs and discover the latest startup
+                    trends.
+                  </p>
+                  <a
+                    href="event-details.html?id=4"
+                    class="btn btn-custom-primary"
+                    >Learn More</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Event Card 5 -->
+            <div
+              class="col-md-4"
+              data-location="Miami"
+              data-category="Sports"
+              data-date="2025-05-12"
+            >
+              <div class="card">
+                <img
+                  src="../assets/images/sport.jpg"
+                  class="card-img-top"
+                  alt="Sports Championship"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Sports Championship</h5>
+                  <p class="card-text">
+                    Witness thrilling matches as teams compete for glory!
+                  </p>
+                  <a
+                    href="event-details.html?id=5"
+                    class="btn btn-custom-primary"
+                    >Learn More</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Event Card 6 -->
+            <div
+              class="col-md-4"
+              data-location="Seattle"
+              data-category="Education"
+              data-date="2025-06-18"
+            >
+              <div class="card">
+                <img
+                  src="../assets/images/education.jpg"
+                  class="card-img-top"
+                  alt="Education Summit"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Education Summit</h5>
+                  <p class="card-text">
+                    Learn about advancements in education and teaching methods
+                    from experts.
+                  </p>
+                  <a
+                    href="event-details.html?id=6"
+                    class="btn btn-custom-primary"
+                    >Learn More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="footer"
+      role="contentinfo"
+      itemscope
+      itemtype="http://schema.org/WPFooter"
+    >
+      <div class="social" role="navigation" aria-labelledby="social-heading">
+        <h3 id="social-heading" class="sr-only">Follow us on social media</h3>
+        <a href="#" aria-label="Facebook"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="#" aria-label="Twitter"
+          ><i class="fa-brands fa-x-twitter"></i
+        ></a>
+        <a href="#" aria-label="Mastodon"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a href="#" aria-label="Instagram"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+      </div>
+      <hr class="footer-break" />
+      <ul
+        class="footer-links"
+        role="navigation"
+        aria-labelledby="footer-links-heading"
+      >
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <p class="copyright">
+        © 2025
+        <a style="color: inherit; text-decoration: none" href="#">Eventify</a>.
+        Empowering Your Events. All Rights Reserved.
+      </p>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // logout
+      function logout() {
+        localStorage.removeItem("token");
+        window.location.href = "pages/login.html";
+      }
+
+      // check if token exists in localstorage, if yes then show logout button instead of login/register button
+      if (localStorage.getItem("token"))
+        document.getElementById(
+          "call-to-action"
+        ).innerHTML = `<a class="btn-custom btn-custom-primary" onclick="logout()">
+            Logout
+          </a>`;
+      else
+        document.getElementById(
+          "call-to-action"
+        ).innerHTML = `<a class="btn-custom btn-custom-primary" href="./login.html">
+            Login/Register
+          </a>`;
+
+      // DECODE TOKEN
+      const token = JSON.parse(localStorage.getItem("token"));
+      if (token) {
+        const decodedToken = parseJwt(token);
+        const isAdmin = decodedToken.isAdmin;
+
+        // Hide the manage event button if the user is not an admin
+        if (!isAdmin)
+          document.getElementById("manage-events").style.display = "none";
+      }
+
+      function parseJwt(token) {
+        // Extract the base64url encoded payload
+        var base64Url = token.split(".")[1];
+
+        // Convert the base64url encoded payload to standard base64
+        var base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+
+        // Decode the base64 encoded payload
+        var jsonPayload = decodeURIComponent(
+          window
+            .atob(base64)
+            .split("")
+            .map(function (c) {
+              return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+            })
+            .join("")
+        );
+
+        // Parse the JSON payload
+        return JSON.parse(jsonPayload);
+      }
+    </script>
+    <script src="../api/event.js"></script>
+  </body>
+</html>

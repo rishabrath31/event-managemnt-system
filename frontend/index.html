@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Management System</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="./assets/images/logo.png" alt="Logo" />Eventify
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#features">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/events.html">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item" id="manage-events">
+              <a class="nav-link" href="./pages/event-management.html"
+                >Manage Events</a
+              >
+            </li>
+            <li class="nav-item" id="call-to-action">
+              <a class="btn-custom btn-custom-primary" href="pages/login.html"
+                >Login/Register</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-primary text-white text-center py-5">
+      <div class="container">
+        <h1>Plan, Manage, and Experience Events Seamlessly</h1>
+        <p class="lead">
+          Your one-stop platform for creating, discovering, and engaging with
+          events.
+        </p>
+        <a href="./pages/events.html" class="btn-custom btn-custom-light"
+          >Explore Events</a
+        >
+      </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="mt-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Features</h2>
+        <div class="row">
+          <!-- Card 1 -->
+          <div class="col-md-4 mb-4">
+            <div class="card text-center shadow">
+              <div class="card-body">
+                <img
+                  src="./assets/images/ce.jpeg"
+                  alt="Create Events"
+                  class="mb-3"
+                  width="80"
+                />
+                <h5 class="card-title">Create Events</h5>
+                <p class="card-text">
+                  Seamlessly create and customize events with ease.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="col-md-4 mb-4">
+            <div class="card text-center shadow">
+              <div class="card-body">
+                <img
+                  src="./assets/images/de.jpeg"
+                  alt="Discover Events"
+                  class="mb-3"
+                  width="80"
+                />
+                <h5 class="card-title">Discover Events</h5>
+                <p class="card-text">
+                  Find events based on location, category, or interest.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="col-md-4 mb-4">
+            <div class="card text-center shadow">
+              <div class="card-body">
+                <img
+                  src="./assets/images/eg.jpeg"
+                  alt="Engage"
+                  class="mb-3"
+                  width="80"
+                />
+                <h5 class="card-title">Engage</h5>
+                <p class="card-text">
+                  Interact with attendees and foster community.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">About Us</h2>
+        <p class="text-center">
+          Our Event Management System is designed to simplify event planning,
+          enhance attendee engagement, and bring people together. Whether you're
+          an organizer or a participant, our platform ensures a seamless and
+          interactive experience.
+        </p>
+        <div class="row text-center mt-4">
+          <div class="col-md-6 box">
+            <h5>For Organizers</h5>
+            <p>Create, manage, and promote events effortlessly.</p>
+          </div>
+          <div class="col-md-6 box">
+            <h5>For Participants</h5>
+            <p>Discover and engage in exciting events near you.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upcoming Events Section -->
+    <section id="events" class="bg-light mb-4">
+      <div class="container">
+        <h2 class="text-center mb-4">Upcoming Events</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="./assets/images/tc.jpeg"
+                class="card-img-top"
+                alt="Event 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Tech Conference 2025</h5>
+                <p class="card-text">
+                  Join industry leaders to explore the future.
+                </p>
+                <a href="#" class="btn-custom btn-custom-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="./assets/images/mf.jpeg"
+                class="card-img-top"
+                alt="Event 2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Music Festival</h5>
+                <p class="card-text">
+                  Experience live performances by top artists.
+                </p>
+                <a href="#" class="btn-custom btn-custom-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="./assets/images/ae.jpeg"
+                class="card-img-top"
+                alt="Event 3"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Art Expo</h5>
+                <p class="card-text">
+                  Discover stunning artworks from renowned artists.
+                </p>
+                <a href="#" class="btn-custom btn-custom-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-intro">
+      <div class="container text-center">
+        <h1>Welcome to Eventify</h1>
+        <p>
+          Eventify is your ultimate platform for discovering, creating, and
+          managing events. We provide a seamless experience for event planners
+          and attendees alike.
+        </p>
+        <img
+          src="./assets/images/hero-bg.jpeg"
+          alt="Eventify"
+          class="about-image"
+        />
+      </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="about-mission bg-light py-5">
+      <div class="container text-center">
+        <h2 class="mt-5">Our Mission</h2>
+        <p>
+          Our mission is to provide an intuitive platform that simplifies event
+          management, making it easier for people to create, attend, and enjoy
+          events while connecting with others.
+        </p>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="about-features py-5">
+      <div class="container text-center">
+        <h2>Features</h2>
+        <div class="row mt-5">
+          <div class="col-md-4">
+            <i class="fas fa-calendar-alt fa-3x mb-3"></i>
+            <h3 class="mt-2">Create Events</h3>
+            <p>Easily create and manage events with custom details.</p>
+          </div>
+          <div class="col-md-4">
+            <i class="fas fa-search fa-3x mb-3"></i>
+            <h3 class="mt-2">Discover Events</h3>
+            <p>Find events based on location, category, or interest.</p>
+          </div>
+          <div class="col-md-4">
+            <i class="fas fa-users fa-3x mb-3"></i>
+            <h3 class="mt-2">Engage with Attendees</h3>
+            <p>Interact with other participants and share feedback.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="about-team bg-light py-5">
+      <div class="container text-center">
+        <h2 class="mb-5">Meet the Team</h2>
+        <div class="row">
+          <div class="col-md-3">
+            <img
+              src="./assets/images/team.jpg"
+              alt="Michael Johnson"
+              class="img-fluid rounded-circle mb-3"
+            />
+            <h3>Michael Johnson</h3>
+            <p>Chief Marketing Officer</p>
+          </div>
+          <div class="col-md-3">
+            <img
+              src="./assets/images/team1.jpg"
+              alt="Samantha Carter"
+              class="img-fluid rounded-circle mb-3"
+            />
+            <h3>Samantha Carter</h3>
+            <p>Head of Operations</p>
+          </div>
+          <div class="col-md-3">
+            <img
+              src="./assets/images/team2.jpg"
+              alt="Daniel Kim"
+              class="img-fluid rounded-circle mb-3"
+            />
+            <h3>Daniel Kim</h3>
+            <p>Creative Director</p>
+          </div>
+          <div class="col-md-3">
+            <img
+              src="./assets/images/team3.jpg"
+              alt="Emily Davis"
+              class="img-fluid rounded-circle mb-3"
+            />
+            <h3>Emily Davis</h3>
+            <p>Product Manager</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- Contact Section -->
+    <section class="about-contact py-5" id="contact">
+      <div class="container text-center">
+        <h2>Contact Us</h2>
+        <p>
+          Have questions or need assistance? Reach out to us at:
+          <a href="mailto:support@eventify.com">support@eventify.com</a>
+        </p>
+      </div>
+    </section>
+
+    <footer
+      class="footer"
+      role="contentinfo"
+      itemscope
+      itemtype="http://schema.org/WPFooter"
+    >
+      <div class="social" role="navigation" aria-labelledby="social-heading">
+        <h3 id="social-heading" class="sr-only">Follow us on social media</h3>
+        <a href="#" aria-label="Facebook"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="#" aria-label="Twitter"
+          ><i class="fa-brands fa-x-twitter"></i
+        ></a>
+        <a href="#" aria-label="Mastodon"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a href="#" aria-label="Instagram"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+      </div>
+      <hr class="footer-break" />
+      <ul
+        class="footer-links"
+        role="navigation"
+        aria-labelledby="footer-links-heading"
+      >
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <p class="copyright">
+        © 2025
+        <a style="color: inherit; text-decoration: none" href="#">Eventify</a>.
+        Empowering Your Events. All Rights Reserved.
+      </p>
+    </footer>
+
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // logout
+      function logout() {
+        localStorage.removeItem("token");
+        window.location.href = "pages/login.html";
+      }
+
+      // check if token exists in localstorage, if yes then show logout button instead of login/register button
+      if (localStorage.getItem("token"))
+        document.getElementById(
+          "call-to-action"
+        ).innerHTML = `<a class="btn-custom btn-custom-primary" onclick="logout()">
+            Logout
+          </a>`;
+      else
+        document.getElementById(
+          "call-to-action"
+        ).innerHTML = `<a class="btn-custom btn-custom-primary" href="pages/login.html">
+            Login/Register
+          </a>`;
+
+      // DECODE TOKEN
+      const token = JSON.parse(localStorage.getItem("token"));
+      if (token) {
+        const decodedToken = parseJwt(token);
+        const isAdmin = decodedToken.isAdmin;
+
+        // Hide the manage event button if the user is not an admin
+        if (!isAdmin)
+          document.getElementById("manage-events").style.display = "none";
+      }
+
+      function parseJwt(token) {
+        // Extract the base64url encoded payload
+        var base64Url = token.split(".")[1];
+
+        // Convert the base64url encoded payload to standard base64
+        var base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+
+        // Decode the base64 encoded payload
+        var jsonPayload = decodeURIComponent(
+          window
+            .atob(base64)
+            .split("")
+            .map(function (c) {
+              return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+            })
+            .join("")
+        );
+
+        // Parse the JSON payload
+        return JSON.parse(jsonPayload);
+      }
+    </script>
+  </body>
+</html>

@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Hide the create event button if the user is not an admin
     if (!isAdmin) createEventButton.style.display = "none";
-  }
+  } else createEventButton.style.display = "none";
 
   function parseJwt(token) {
     // Extract the base64url encoded payload
@@ -38,18 +38,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   (async function loadEvents() {
     try {
       // Fetch events from the backend
-      const response = await fetch(
-        "http://localhost:3001/events",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${JSON.parse(
-              localStorage.getItem("token")
-            )}`,
-          },
-        }
-      );
+      const response = await fetch("http://localhost:3001/events", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${JSON.parse(localStorage.getItem("token"))}`,
+        },
+      });
       const data = await response.json();
 
       if (response.ok && data.error === false) {

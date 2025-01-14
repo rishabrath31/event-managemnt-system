@@ -7,6 +7,7 @@ const checkjwt = expressjwt({
     secret: process.env.SECRET,
     algorithms: ["HS256"],
 })
+
 const router = express.Router();
 
 import userRouter from './user.js'
